@@ -4,8 +4,8 @@ from sklearn import preprocessing
 
 
 def read(datafile):
-    #datafile = pd.read_excel("C:/Users/l.xiao/Desktop/wustl/514/regression/Concrete_Data.xls", "Sheet1").to_numpy()
-    #datafile = pd.read_excel("C:/Users/l.xiao/Desktop/wustl/514/regression/Normalized_Data.xls", "Sheet1").to_numpy()
+    #datafile = pd.read_excel("./Concrete_Data.xls", "Sheet1").to_numpy()
+    #datafile = pd.read_excel("./Normalized_Data.xls", "Sheet1").to_numpy()
     np.random.shuffle(datafile)
     #  split dataset to train / test
     traindata = datafile[:900, :]
@@ -25,7 +25,7 @@ def read(datafile):
 
     #return testdata_x
 '''
-datafile = pd.read_excel("C:/Users/l.xiao/Desktop/wustl/514/regression/Concrete_Data.xls", "Sheet1").to_numpy()
+datafile = pd.read_excel("./Concrete_Data.xls", "Sheet1").to_numpy()
 testdata_x = read(datafile)
 print(testdata_x[:10])
 
