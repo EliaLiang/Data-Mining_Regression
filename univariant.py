@@ -4,7 +4,7 @@ from math import inf
 from read_data import read
 import matplotlib.pyplot as plt
 
-#datafile = pd.read_excel("C:/Users/l.xiao/Desktop/wustl/514/regression/Concrete_Data.xls", "Sheet1").to_numpy()
+#datafile = pd.read_excel("./Concrete_Data.xls", "Sheet1").to_numpy()
 '''
 testdata_x = read(datafile)
 print(testdata_x[:10])
@@ -82,12 +82,12 @@ def univariant(traindata_x, traindata_y):
 
     return weight_list, bias_list
 
-datafile = pd.read_excel("C:/Users/l.xiao/Desktop/wustl/514/regression/Normalized_Data.xls", "Sheet1").to_numpy()
-#datafile = pd.read_excel("C:/Users/l.xiao/Desktop/wustl/514/regression/Concrete_Data.xls", "Sheet1").to_numpy()
+datafile = pd.read_excel("./Normalized_Data.xls", "Sheet1").to_numpy()
+#datafile = pd.read_excel("./Concrete_Data.xls", "Sheet1").to_numpy()
 data_x, data_y, traindata_x, traindata_y, testdata_x, testdata_y = read(datafile)
 weight, bias = univariant(traindata_x, traindata_y)
 
-with open('C:/Users/l.xiao/Desktop/wustl/514/regression/norm_data/hyperparameter_MAE_uni.txt', 'w') as file:
+with open('./norm_data/hyperparameter_MAE_uni.txt', 'w') as file:
     file.write("univariate_MAE_weight: ")
     file.write(str(weight))
     file.write("\nunivariate_MAE_bias: ")
