@@ -37,11 +37,11 @@ def ridge_regression(traindata_x, traindata_y):
     return weight, bias, final
 
 
-datafile = pd.read_excel("C:/Users/l.xiao/Desktop/wustl/514/regression/Normalized_Data.xls", "Sheet1").to_numpy()
+datafile = pd.read_excel("./Normalized_Data.xls", "Sheet1").to_numpy()
 _, _, traindata_x, traindata_y, testdata_x, testdata_y = read(datafile)
 weight, bias, final = ridge_regression(traindata_x, traindata_y)
 
-with open("C:/Users/l.xiao/Desktop/wustl/514/regression/norm_data/hyperparameter_ridge_MSE.txt", "w+") as file:
+with open("./norm_data/hyperparameter_ridge_MSE.txt", "w+") as file:
     file.write("Ridge-Variate_norm_weight: ")
     file.write(str(list(np.resize(weight, (weight.shape[0],)))))
     file.write("\nRidge-Variate_norm_bias: ")
