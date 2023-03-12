@@ -12,11 +12,11 @@ def normalizing(data):
     result = (data-mins)/gaps
     return result
 
-#data = pd.read_excel('C:/Users/l.xiao/Desktop/wustl/514/regression/Concrete_Data.xls', 'Sheet1')
+#data = pd.read_excel('./Concrete_Data.xls', 'Sheet1')
 #result = normalizing(data)
 '''
 # create a new file called Normalized_Data.txt and write the result to it
-with open('C:/Users/l.xiao/Desktop/wustl/514/regression/Normalized_Data.txt', 'w') as file:
+with open('./Normalized_Data.txt', 'w') as file:
     for row in result:
         file.write(' '.join(map(str, row)) + '\n')
 
@@ -24,7 +24,7 @@ with open('C:/Users/l.xiao/Desktop/wustl/514/regression/Normalized_Data.txt', 'w
 
 '''
 # read in your data from the original file
-data = pd.read_excel('C:/Users/l.xiao/Desktop/wustl/514/regression/Concrete_Data.xls', 'Sheet1')
+data = pd.read_excel('./Concrete_Data.xls', 'Sheet1')
 
 # perform normalization on the data
 normalized_data = normalizing(data)
@@ -33,4 +33,4 @@ normalized_data = normalizing(data)
 df_normalized = pd.DataFrame(normalized_data, columns=data.columns)
 
 # save the new dataframe to a new xlsx file
-df_normalized.to_excel('C:/Users/l.xiao/Desktop/wustl/514/regression/Normalized_Data.xls', engine='openpyxl', index=False)
+df_normalized.to_excel('./Normalized_Data.xls', engine='openpyxl', index=False)
